@@ -10,7 +10,7 @@ import (
 
 func main() {
 
-	conn, err := net.Dial("tcp", "192.168.10.10:8080")
+	conn, err := net.Dial("tcp", "adoibro.net:443")
 
 	if err != nil {
 		log.Println(err)
