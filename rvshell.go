@@ -6,11 +6,17 @@ import (
 	"net"
 	"os/exec"
 	"strings"
+	"time"
+)
+
+const (
+	t_secs = 5
 )
 
 func main() {
 
-	conn, err := net.Dial("tcp", "adoibro.net:443")
+	time_out := time.Duration(t_secs) * time.Second
+	conn, err := net.DialTimeout("tcp", "adoibro.net:443", time_out)
 
 	if err != nil {
 		log.Println(err)
